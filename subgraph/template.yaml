@@ -1,0 +1,28 @@
+specVersion: 0.0.4
+description: Gravatar for Ethereum
+repository: https://github.com/graphprotocol/example-subgraphs
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: GravatarRegistry
+    network: {{ network }}
+    source:
+      address: '{{ address }}'
+      abi: GravatarRegistry
+      startBlock: {{ startBlock }}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - GravatarRegistry
+      abis:
+        - name: GravatarRegistry
+          file: ./abis/GravatarRegistry.json
+      eventHandlers:
+        - event: NewGravatar(uint256,address,string,string)
+          handler: handleNewGravatar
+        - event: UpdatedGravatar(uint256,address,string,string)
+          handler: handleUpdatedGravatar
+      file: ./src/mappings/gravatar.ts

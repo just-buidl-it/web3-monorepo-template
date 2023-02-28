@@ -1,0 +1,46 @@
+{
+    "globals": {
+        "JSX": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "react-app",
+        "react-app/jest",
+        "standard-with-typescript",
+        "prettier",
+        "airbnb"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "react"
+    ],
+    "rules": {
+        "import/no-unresolved": 0,
+        "import/extensions": 0,
+        "indent": [
+            "error",
+            2
+        ],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.tsx", "**/*.test.ts","src/setupTests.js", "src/clients/subgraph/codegen.ts"]}],
+        "react/jsx-filename-extension": 0,
+        "import/prefer-default-export": 0,
+        "no-return-await": 0,
+        "max-len": [
+            1,
+            {
+                "code": 150
+            }
+        ],
+        "@typescript-eslint/explicit-function-return-type": 1,
+        // handled by prettier
+        "comma-dangle": 0,
+        "object-curly-newline": 0,
+        "react/jsx-curly-newline": 0,
+        "implicit-arrow-linebreak": 0,
+    },
+    "parserOptions": {
+        "project": [
+            "./tsconfig.json"
+        ]
+    }
+}

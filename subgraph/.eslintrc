@@ -1,0 +1,96 @@
+{
+  "parserOptions": {
+    "project": [
+      "./.eslint-tsconfig.json"
+    ]
+  },
+  // take from https://www.npmjs.com/package/@shopify/eslint-plugin-assemblyscript?activeTab=explore which doesn't support eslint 8
+  "globals": {
+    // static checks
+    "isInteger": false,
+    "isFloat": false,
+    "isSigned": false,
+    "isReference": false,
+    "isString": false,
+    "isArray": false,
+    "isFunction": false,
+    "isNullable": false,
+    "isDefined": false,
+    "isConstant": false,
+    "isManaged": false,
+    // size and alignment
+    "sizeof": false,
+    "offsetof": false,
+    "alignof": false,
+    // utility
+    "assert": false,
+    "instanciate": false,
+    "changetype": false,
+    "idof": false,
+    "nameof": false,
+    // math
+    "clz": false,
+    "ctz": false,
+    "popcnt": false,
+    "rotl": false,
+    "rotr": false,
+    "abs": false,
+    "max": false,
+    "min": false,
+    "ceil": false,
+    "floor": false,
+    "copysign": false,
+    "nearest": false,
+    "reinterpret": false,
+    "sqrt": false,
+    "trunc": false,
+    // memory
+    "store": false,
+    "load": false,
+    "memory": false,
+    // memory utility
+    "bswap": false,
+    "bswap16": false,
+    // control flow
+    "select": false,
+    "unreachable": false,
+    // Keywords
+    "operator": false,
+    "unmanaged": false,
+    "inline": false,
+    // stdlib - Constants
+    "NaN": false,
+    "Infinity": false,
+    // stdlib - Functions
+    "isNaN": false,
+    "isFinite": false,
+    "parseInt": false,
+    "parseFloat": false,
+    // stdlib - Datatypes
+    "Array": false,
+    "ArrayBuffer": false,
+    "DataView": false,
+    "Date": false,
+    "Error": false,
+    "Map": false,
+    "Math": false,
+    "Number": false,
+    "Set": false,
+    "String": false,
+    "TypedArray": false,
+    "i32": false,
+    "u32": false,
+    "i64": false,
+    "u64": false,
+    "f32": false,
+    "f64": false,
+    // Matchstick
+    "before": false,
+    "after": false
+  },
+  "rules":{
+    "@typescript-eslint/strict-boolean-expressions": 0,
+    "@typescript-eslint/no-non-null-assertion": 1,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["hardhat.config.ts", "tests/**", "hardhat-healthcheck.js", "graph-client/**"]}]
+  }
+}

@@ -1,0 +1,8 @@
+query GravatarById($id: ID!) {
+  gravatar(id: $id) {
+      id
+      owner
+      displayName
+      imageUrl
+    }
+}

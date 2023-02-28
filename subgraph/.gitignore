@@ -1,0 +1,20 @@
+# docker
+data/
+
+# contracts
+contracts
+artifacts
+typechain-types
+build
+cache
+graph-client/.graphclient
+
+# cli
+generated/
+subgraph-client/.graphclient
+
+# env
+subgraph.yml
+
+# tests
+tests/.bin

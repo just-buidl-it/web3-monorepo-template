@@ -1,0 +1,8 @@
+query Gravatars {
+  gravatars {
+      id
+      owner
+      displayName
+      imageUrl
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "root": true,
+    "plugins": [
+        "@typescript-eslint",
+        "jest"
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "standard-with-typescript",
+        "prettier",
+        "airbnb"
+    ],
+    "rules": {
+        "import/no-unresolved": 0,
+        "import/extensions": 0,
+        "max-len": [
+            1,
+            {
+                "code": 150
+            }
+        ],
+        // handled by prettier
+        "comma-dangle": "off"
+    }
+}
